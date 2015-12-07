@@ -54,7 +54,10 @@ plugins=(encode64 git wd brew textmate)
 
 # User configuration
 
-export PATH="/Users/villegap/.rvm/gems/ruby-2.2.2/bin:/Users/villegap/.rvm/gems/ruby-2.2.2@global/bin:/Users/villegap/.rvm/rubies/ruby-2.2.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/lib/node_modules:/Users/villegap/activator-1.3.5-minimal:/usr/local/bin:/Users/villegap/.rvm/bin"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/bin"
+export PATH="$PATH:/usr/local/lib/node_modules"
+export PATH="$PATH:/Users/villegap/activator-1.3.5-minimal"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -84,10 +87,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export JAVA_HOME=$(/usr/libexec/java_home)
 export DEFAULT_USER="villegap"
 
 alias vpnchrome='open -a /Applications/Google\ Chrome.app --args --proxy-server=10.126.96.60:3128 --proxy-bypass-list="local;127.0.0.1;10.*;localhost"'
-export JAVA_HOME=$(/usr/libexec/java_home)
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
