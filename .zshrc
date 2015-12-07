@@ -85,3 +85,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export DEFAULT_USER="villegap"
+
+alias vpnchrome='open -a /Applications/Google\ Chrome.app --args --proxy-server=10.126.96.60:3128 --proxy-bypass-list="local;127.0.0.1;10.*;localhost"'
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
