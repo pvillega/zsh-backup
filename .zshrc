@@ -90,5 +90,9 @@ source $ZSH/oh-my-zsh.sh
 export JAVA_HOME=$(/usr/libexec/java_home)
 export DEFAULT_USER="villegap"
 
-alias vpnchrome='open -a /Applications/Google\ Chrome.app --args --proxy-server=10.126.96.60:3128 --proxy-bypass-list="local;127.0.0.1;10.*;localhost"'
+source ~/dev/projects/boost-tools/init.sh
+
+alias vpnchrome='open -a /Applications/Google\ Chrome.app --args --proxy-server=boost-build2:3128 --proxy-bypass-list="local;127.0.0.1;10.*;localhost"'
+
+alias meteo='curl -4 wttr.in/SW19'
 
