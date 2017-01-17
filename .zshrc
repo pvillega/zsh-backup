@@ -1,12 +1,13 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/villegap/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/pvillega/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -28,7 +29,7 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
- ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -50,17 +51,13 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(encode64 git wd brew textmate)
+plugins=(git zsh-autosuggestions wd sudo)
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/bin"
-export PATH="$PATH:/usr/local/lib/node_modules"
-export PATH="$PATH:/Users/villegap/activator-1.3.5-minimal"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -76,7 +73,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -87,12 +84,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export DEFAULT_USER="pvillega"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export JAVA_HOME=$(/usr/libexec/java_home)
-export DEFAULT_USER="villegap"
-
-source ~/dev/projects/boost-tools/init.sh
-
-alias vpnchrome='open -a /Applications/Google\ Chrome.app --args --proxy-server=boost-build2:3128 --proxy-bypass-list="local;127.0.0.1;10.*;localhost"'
-
 alias meteo='curl -4 wttr.in/SW19'
+
+# the line below MUST be the last config in the file
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
