@@ -90,6 +90,9 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export JAVA_HOME=$(/usr/libexec/java_home)
 alias meteo='curl -4 wttr.in/SW19'
 
+eval $(ssh-agent)
+ssh-add -K
+
 # the line below MUST be the last config in the file
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
