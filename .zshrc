@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+#export PATH=/usr/local/bin:$HOME/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/pvillega/.oh-my-zsh
@@ -8,6 +8,7 @@ export ZSH=/Users/pvillega/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_COLOR_SCHEME='light'
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -61,6 +62,7 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+export LANG="en_GB.UTF-8"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -85,14 +87,26 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export DEFAULT_USER="pvillega"
+export EDITOR="nano"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=/usr/local/bin:$HOME/bin:$PATH
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/nss/bin:$PATH"
+
+#export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME="/Users/pvillega/graalvm-ce-19.1.1/Contents/Home"
 alias meteo='curl -4 wttr.in/SW19'
 
-eval $(ssh-agent)
-ssh-add -K
+fpath+=~/.zfunc
+
+ulimit -n 200000
+ulimit -u 2048
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/pvillega/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
 # the line below MUST be the last config in the file
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
